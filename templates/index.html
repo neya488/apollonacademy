@@ -12,33 +12,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root{
- --blue:#00d9ff;
- --purple:#9461ff;
- --bg:#070b19;
- --card:#101a31;
- --muted:#91a0bd;
- --border:#26395c;
+ --blue:#ffffff;
+ --purple:#aaaaaa;
+ --bg:#030805;
+ --card:#07140b;
+ --muted:#8ca995;
+ --border:#14552c;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
- background:var(--bg);color:#edf4ff;
+ background:var(--bg);color:#ffffff;
  font-family:Inter,Arial,sans-serif;
  overflow-x:hidden;
 }
 body:before{
  content:"";position:fixed;inset:0;z-index:-2;
  background:
- radial-gradient(ellipse at 50% 0%,#142b55 0%,transparent 48%),
- radial-gradient(ellipse at 0% 75%,#24104b,transparent 40%),
- radial-gradient(ellipse at 100% 80%,#063747,transparent 35%);
+ radial-gradient(ellipse at 50% 0%,#111111 0%,transparent 48%),
+ radial-gradient(ellipse at 0% 75%,#080808,transparent 40%),
+ radial-gradient(ellipse at 100% 80%,#151515,transparent 35%);
 }
 body:after{
  content:"";position:fixed;inset:0;z-index:-1;
  pointer-events:none;opacity:.09;
  background-image:
- linear-gradient(#00d9ff 1px,transparent 1px),
- linear-gradient(90deg,#00d9ff 1px,transparent 1px);
+ linear-gradient(#ffffff 1px,transparent 1px),
+ linear-gradient(90deg,#ffffff 1px,transparent 1px);
  background-size:60px 60px;
 }
 header{
@@ -46,7 +46,7 @@ header{
  display:flex;justify-content:space-between;
  align-items:center;gap:18px;padding:19px 7%;
  background:#070b19eF;backdrop-filter:blur(20px);
- border-bottom:1px solid #00d9ff35;
+ border-bottom:1px solid #ffffff35;
 }
 .logo{
  font-family:Orbitron,sans-serif;font-size:21px;
@@ -62,12 +62,12 @@ nav a{
  border-radius:7px;font-size:11px;
  font-weight:800;letter-spacing:1px;transition:.3s;
 }
-.login{border:1px solid #526487;color:#dceaff}
+.login{border:1px solid #666666;color:#eeeeee}
 .register{
  background:linear-gradient(110deg,var(--blue),var(--purple));
- color:#07101c;box-shadow:0 0 22px #00d9ff45;
+ color:#020a04;box-shadow:0 0 22px #ffffff45;
 }
-nav a:hover{transform:translateY(-3px);box-shadow:0 0 25px #00d9ff66}
+nav a:hover{transform:translateY(-3px);box-shadow:0 0 25px #ffffff66}
 main{max-width:1200px;margin:auto;padding:65px 22px}
 .hero{
  text-align:center;padding:55px 10px 100px;
@@ -75,10 +75,10 @@ main{max-width:1200px;margin:auto;padding:65px 22px}
 }
 .status{
  display:inline-block;padding:10px 17px;
- border:1px solid #00d9ff55;border-radius:30px;
- background:#00d9ff0d;color:#7cecff;
+ border:1px solid #ffffff55;border-radius:30px;
+ background:#ffffff0d;color:#dddddd;
  font-size:10px;font-weight:800;letter-spacing:2px;
- box-shadow:0 0 25px #00d9ff12;
+ box-shadow:0 0 25px #ffffff12;
 }
 .status:before{content:"●";color:var(--blue);margin-right:9px}
 .symbol{
@@ -87,14 +87,14 @@ main{max-width:1200px;margin:auto;padding:65px 22px}
  animation:float 3s ease-in-out infinite;
 }
 .eyebrow{
- color:#a68aff;font-size:11px;font-weight:800;
+ color:#bbbbbb;font-size:11px;font-weight:800;
  letter-spacing:6px;margin-bottom:18px;
 }
 h1{
  font-family:Orbitron,sans-serif;
  font-size:clamp(38px,8vw,85px);
  font-weight:900;letter-spacing:3px;line-height:1.2;
- text-shadow:0 0 35px #00d9ff30;
+ text-shadow:0 0 35px #ffffff30;
 }
 h1 span{
  background:linear-gradient(90deg,var(--blue),var(--purple));
@@ -103,7 +103,7 @@ h1 span{
 }
 .subtitle{
  max-width:650px;margin:24px auto;
- color:#aab8d2;line-height:1.9;font-size:14px;
+ color:#aaaaaa;line-height:1.9;font-size:14px;
 }
 .hero-actions{
  display:flex;justify-content:center;
@@ -117,10 +117,10 @@ h1 span{
 }
 .primary{
  background:linear-gradient(110deg,var(--blue),var(--purple));
- color:#07101c;box-shadow:0 0 25px #00d9ff35;
+ color:#020a04;box-shadow:0 0 25px #ffffff35;
 }
-.secondary{border:1px solid #526487;color:#e4edff}
-.action:hover{transform:translateY(-4px);box-shadow:0 0 30px #00d9ff65}
+.secondary{border:1px solid #666666;color:#e4edff}
+.action:hover{transform:translateY(-4px);box-shadow:0 0 30px #ffffff65}
 .section-title{
  font-family:Orbitron,sans-serif;text-align:center;
  font-size:clamp(19px,4vw,29px);
@@ -149,7 +149,7 @@ h1 span{
 }
 .package:hover{
  transform:translateY(-9px);border-color:var(--accent);
- box-shadow:0 15px 35px #0008,0 0 25px #00d9ff20;
+ box-shadow:0 15px 35px #0008,0 0 25px #ffffff20;
 }
 .level{color:#8797b7;font-size:9px;letter-spacing:3px;font-weight:800}
 .emblem{
@@ -167,7 +167,7 @@ h1 span{
 }
 .price{font-size:25px;font-weight:900;margin:22px 0 12px}
 .price small{font-size:10px;color:#9aa9c4}
-.description{min-height:39px;color:#aab8d2;font-size:11px;line-height:1.7}
+.description{min-height:39px;color:#aaaaaa;font-size:11px;line-height:1.7}
 .features{text-align:left;margin:20px 0;min-height:90px}
 .features div{color:#dce8ff;font-size:10px;margin:12px 0}
 .features span{color:var(--accent);margin-right:8px}
@@ -176,7 +176,7 @@ h1 span{
  border-radius:6px;text-decoration:none;color:var(--accent);
  font-size:10px;font-weight:900;letter-spacing:1.5px;transition:.3s;
 }
-.choose:hover{background:var(--accent);color:#07101c;box-shadow:0 0 20px var(--accent)}
+.choose:hover{background:var(--accent);color:#020a04;box-shadow:0 0 20px var(--accent)}
 .starter{--accent:#dce8ff}
 .silver{--accent:#bd9aff}
 .gold{--accent:#ffcf70}
@@ -194,7 +194,7 @@ h1 span{
 .benefits{
  display:flex;justify-content:center;flex-wrap:wrap;
  gap:20px 35px;margin:65px 0;padding:25px 10px;
- border-top:1px solid #00d9ff35;border-bottom:1px solid #00d9ff35;
+ border-top:1px solid #ffffff35;border-bottom:1px solid #ffffff35;
 }
 .benefits span{color:#dce8ff;font-size:11px;font-weight:700}
 .benefits b{color:var(--blue);margin-right:7px}
@@ -207,13 +207,13 @@ h1 span{
  background:linear-gradient(145deg,#14213c,#0b1225);
  border-radius:12px;transition:.3s;
 }
-.info-card:hover{border-color:#00d9ff88;transform:translateY(-5px)}
+.info-card:hover{border-color:#ffffff88;transform:translateY(-5px)}
 .icon{font-size:26px;color:var(--blue);margin-bottom:15px}
 .info-card h3{font-size:13px;letter-spacing:1px;margin-bottom:10px}
-.info-card p{font-size:11px;line-height:1.8;color:#aab8d2}
+.info-card p{font-size:11px;line-height:1.8;color:#aaaaaa}
 .bottom{
  text-align:center;margin-top:85px;padding:55px 15px;
- border:1px solid #00d9ff40;border-radius:14px;
+ border:1px solid #ffffff40;border-radius:14px;
  background:radial-gradient(ellipse at center,#192d50,#0b1020 70%);
 }
 .bottom h2{
@@ -227,7 +227,7 @@ h1 span{
 .bottom p{color:#8795b3;font-size:9px;letter-spacing:3px;margin-top:22px}
 footer{
  text-align:center;padding:25px 15px;
- border-top:1px solid #00d9ff35;color:#8795b3;
+ border-top:1px solid #ffffff35;color:#8795b3;
  font-size:9px;letter-spacing:2px;
 }
 @keyframes float{
@@ -253,10 +253,10 @@ footer{
  position:relative;
  overflow:hidden;
  padding:55px 38px 60px;
- border:1px solid #00d9ff55;
+ border:1px solid #ffffff55;
  border-radius:30px;
  background:linear-gradient(115deg,#102b46ed,#11172ded 55%,#251744ed);
- box-shadow:0 20px 65px #0006,0 0 35px #00d9ff12;
+ box-shadow:0 20px 65px #0006,0 0 35px #ffffff12;
 }
 .hero:after{
  content:"A";
@@ -275,7 +275,7 @@ footer{
 .hero h1{max-width:850px}
 .hero .subtitle{margin:22px 0;max-width:650px}
 .hero .hero-actions{justify-content:flex-start}
-.status{box-shadow:0 0 25px #00d9ff15}
+.status{box-shadow:0 0 25px #ffffff15}
 @media(max-width:700px){
  .hero{padding:35px 22px;border-radius:22px}
  .hero:after{font-size:170px;right:0;top:-15px}
@@ -285,9 +285,18 @@ footer{
  nav a{font-size:9px!important;padding:10px!important}
 }
 
+
+#matrix-bg{
+ position:fixed;inset:0;width:100%;height:100%;
+ z-index:0;pointer-events:none;opacity:.22;
+}
+header{z-index:10}
+main,footer{position:relative;z-index:1}
+
 </style>
 </head>
 <body>
+<canvas id="matrix-bg" aria-hidden="true"></canvas>
 
 <header>
  <div class="logo">APOLLON <span>ACADEMY.</span></div>
@@ -348,7 +357,7 @@ footer{
      <div><span>✓</span> Ek eğitim içerikleri</div>
      <div><span>✓</span> Özel profil rozeti</div>
     </div>
-    <a class="choose" href="https://t.me/dertvar?text=Merhaba%2C%20G%C3%9CM%C3%9C%C5%9E%20paketini%20sat%C4%B1n%20almak%20istiyorum.%20%2899%20TL%2Fay%29">PAKETİ SEÇ →</a>
+    <a class="choose" href="https://t.me/dertlimisin?text=Merhaba%2C%20G%C3%9CM%C3%9C%C5%9E%20paketini%20sat%C4%B1n%20almak%20istiyorum.%20%2899%20TL%2Fay%29">PAKETİ SEÇ →</a>
    </article>
 
    <article class="package gold">
@@ -363,7 +372,7 @@ footer{
      <div><span>✓</span> Özel içerikler</div>
      <div><span>✓</span> Altın profil rozeti</div>
     </div>
-    <a class="choose" href="https://t.me/dertvar?text=Merhaba%2C%20ALTIN%20paketini%20sat%C4%B1n%20almak%20istiyorum.%20%28199%20TL%2Fay%29">PAKETİ SEÇ →</a>
+    <a class="choose" href="https://t.me/dertlimisin?text=Merhaba%2C%20ALTIN%20paketini%20sat%C4%B1n%20almak%20istiyorum.%20%28199%20TL%2Fay%29">PAKETİ SEÇ →</a>
    </article>
 
    <article class="package diamond">
@@ -378,7 +387,7 @@ footer{
      <div><span>✓</span> Elmas üyelik rozeti</div>
      <div><span>✓</span> Özel ayrıcalıklar</div>
     </div>
-    <a class="choose" href="https://t.me/dertvar?text=Merhaba%2C%20ELMAS%20paketini%20sat%C4%B1n%20almak%20istiyorum.%20%28349%20TL%2Fay%29">PAKETİ SEÇ →</a>
+    <a class="choose" href="https://t.me/dertlimisin?text=Merhaba%2C%20ELMAS%20paketini%20sat%C4%B1n%20almak%20istiyorum.%20%28349%20TL%2Fay%29">PAKETİ SEÇ →</a>
    </article>
 
    <article class="package legend">
@@ -394,7 +403,7 @@ footer{
      <div><span>✓</span> Özel EFSANE rozeti</div>
      <div><span>✓</span> En üst üyelik görünümü</div>
     </div>
-    <a class="choose" href="https://t.me/dertvar?text=Merhaba%2C%20EFSANE%20paketini%20sat%C4%B1n%20almak%20istiyorum.%20%28599%20TL%2Fay%29">PAKETİ SEÇ →</a>
+    <a class="choose" href="https://t.me/dertlimisin?text=Merhaba%2C%20EFSANE%20paketini%20sat%C4%B1n%20almak%20istiyorum.%20%28599%20TL%2Fay%29">PAKETİ SEÇ →</a>
    </article>
   </div>
  </section>
@@ -439,5 +448,50 @@ footer{
 </main>
 
 <footer>© 2026 APOLLON ACADEMY — ALL RIGHTS RESERVED</footer>
+
+<script>
+(() => {
+ const canvas = document.getElementById('matrix-bg');
+ if (!canvas) return;
+ const ctx = canvas.getContext('2d');
+ const chars = '01ABCDEFGHIJKLMNOPQRSTUVWXYZ<>/{}[]';
+ const size = 14;
+ let drops = [], w = 0, h = 0;
+
+ function resize() {
+   const dpr = Math.min(devicePixelRatio || 1, 2);
+   w = innerWidth;
+   h = innerHeight;
+   canvas.width = w * dpr;
+   canvas.height = h * dpr;
+   ctx.setTransform(dpr,0,0,dpr,0,0);
+   drops = Array.from(
+     {length:Math.ceil(w/size)},
+     () => Math.random()*-h/size
+   );
+ }
+
+ function draw() {
+   ctx.fillStyle = 'rgba(0,0,0,0.12)';
+   ctx.fillRect(0,0,w,h);
+   ctx.font = size + 'px monospace';
+
+   drops.forEach((y,i) => {
+     const char = chars[Math.floor(Math.random()*chars.length)];
+     ctx.fillStyle = Math.random() > .985 ? '#fff' : '#888';
+     ctx.fillText(char,i*size,y*size);
+     if(y*size > h && Math.random() > .975) drops[i] = 0;
+     drops[i] += .45;
+   });
+
+   requestAnimationFrame(draw);
+ }
+
+ resize();
+ addEventListener('resize',resize);
+ draw();
+})();
+</script>
+
 </body>
 </html>
