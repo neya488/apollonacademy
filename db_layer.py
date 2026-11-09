@@ -81,3 +81,22 @@ class PGConnection:
             ssl_context=False,
             timeout=20,
         )
+        self.lock_next_user_select = False
+
+    def execute(self, sql, params=()):
+        cursor = PGCursor(self.connection.cursor(), self)
+        return cursor.execute(sql, params)
+
+    def commit(self):
+        self.connection.commit()
+
+    def rollback(self):
+        self.connection.rollback()
+        self.lock_next_user_select = False
+
+    def close(self):
+        self.connection.close()
+
+
+def get_postgres_db():
+    return PGConnection()
