@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050505">
+<title>APOLLON ACADEMY | Giriş Yap</title>
+
+<style>
+*{box-sizing:border-box}
+:root{
+ --red:#ed263f;
+ --bg:#050505;
+ --muted:#9999a3;
+}
+body{
+ margin:0;min-height:100vh;padding:22px;
+ color:#fff;font-family:Arial,sans-serif;
+ background:
+ radial-gradient(ellipse at 50% 45%,#1b1013 0%,transparent 55%),
+ #050505;
+ overflow-x:hidden;
+}
+body:before{
+ content:"";position:fixed;inset:0;pointer-events:none;
+ opacity:.08;
+ background-image:
+ linear-gradient(#ffffff10 1px,transparent 1px),
+ linear-gradient(90deg,#ffffff10 1px,transparent 1px);
+ background-size:55px 55px;
+}
+a{color:inherit;text-decoration:none}
+.nav{
+ max-width:1100px;margin:0 auto 38px;
+ display:flex;justify-content:space-between;
+ align-items:center;position:relative;z-index:2;
+}
+.logo{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:2px}
+.logo-icon{
+ width:43px;height:43px;border-radius:12px;
+ display:grid;place-items:center;
+ background:linear-gradient(145deg,#f12d49,#831326);
+ color:white;font-size:23px;
+ box-shadow:0 5px 25px #ed263f25;
+}
+.logo small{display:block;color:var(--red);font-size:10px;margin-top:4px}
+.nav-link{
+ padding:11px 18px;border:1px solid #ffffff35;
+ border-radius:30px;font-size:13px;color:#ddd;
+ transition:.2s;
+}
+.nav-link:hover{border-color:var(--red);color:white}
+
+.layout{
+ max-width:1000px;margin:auto;
+ display:grid;grid-template-columns:1fr 470px;
+ gap:50px;align-items:center;
+ position:relative;z-index:1;
+}
+.hero{text-align:center;padding:25px 10px}
+.emblem{
+ width:100px;height:100px;margin:0 auto 25px;
+ display:grid;place-items:center;
+ border:1px solid #ed263f70;border-radius:50%;
+ color:var(--red);font-size:55px;font-weight:900;
+ box-shadow:0 0 45px #ed263f15,inset 0 0 30px #ed263f10;
+}
+.eyebrow{
+ color:#aaa;font-size:11px;letter-spacing:6px;
+ margin-bottom:20px;
+}
+.hero h1{
+ font-size:clamp(38px,6vw,65px);
+ letter-spacing:-2px;line-height:1.05;margin:0;
+}
+.hero h1 span{color:var(--red)}
+.hero p{
+ color:#aaa;line-height:1.8;font-size:15px;
+ margin:20px auto;max-width:370px;
+}
+.line{
+ width:65px;height:2px;margin:25px auto;
+ background:var(--red);box-shadow:0 0 15px #ed263f;
+}
+.status{
+ display:flex;justify-content:center;align-items:center;
+ gap:10px;color:#aaa;font-size:10px;letter-spacing:3px;
+}
+.dot{
+ width:7px;height:7px;border-radius:50%;
+ background:#45cf91;box-shadow:0 0 12px #45cf91;
+}
+.card{
+ padding:34px 30px;
+ background:linear-gradient(145deg,#111113f5,#090909f5);
+ border:1px solid #ffffff20;border-radius:20px;
+ box-shadow:0 25px 80px #000b,0 0 35px #ed263f0c;
+ position:relative;overflow:hidden;
+ animation:appear .7s ease both;
+}
+.card:before{
+ content:"";position:absolute;top:0;left:0;
+ width:100%;height:2px;
+ background:linear-gradient(90deg,transparent,var(--red),#ffffff80,transparent);
+}
+@keyframes appear{
+ from{opacity:0;transform:translateY(18px)}
+ to{opacity:1;transform:translateY(0)}
+}
+.card-top{
+ display:flex;justify-content:space-between;
+ gap:10px;margin-bottom:30px;
+}
+.card-top span{font-size:10px;letter-spacing:2px;color:var(--red)}
+.card-top .access{color:#85858d}
+.heading{
+ display:flex;align-items:center;gap:13px;
+ margin-bottom:8px;
+}
+.heading-mark{
+ width:34px;height:34px;border-radius:9px;
+ background:#ed263f18;color:var(--red);
+ display:grid;place-items:center;font-size:19px;
+}
+.card h2{font-size:26px;margin:0;letter-spacing:1px}
+.sub{color:var(--muted);font-size:13px;margin:10px 0 28px}
+.message{
+ padding:12px;background:#271116;
+ border:1px solid #853041;border-radius:9px;
+ color:#ffb2bd;font-size:13px;margin:12px 0;
+}
+.field{margin-bottom:20px}
+label{
+ display:block;color:#c9c9cf;font-size:11px;
+ font-weight:bold;letter-spacing:1.5px;margin-bottom:10px;
+}
+.input-wrap{position:relative}
+input{
+ width:100%;padding:16px;
+ border:1px solid #38383d;border-radius:11px;
+ background:#080808;color:white;
+ outline:none;font-size:15px;transition:.2s;
+}
+input:focus{
+ border-color:var(--red);
+ box-shadow:0 0 0 3px #ed263f15;
+}
+input::placeholder{color:#66666f}
+.password-wrap{display:flex;gap:9px}
+.password-wrap input{min-width:0}
+.show{
+ border:1px solid #4a3035;border-radius:10px;
+ background:#171012;color:#ff8795;
+ padding:0 13px;cursor:pointer;font-size:11px;
+}
+.forgot{
+ display:flex;justify-content:flex-end;
+ margin:-3px 0 23px;font-size:12px;
+}
+.forgot a{color:#ed5367}
+.forgot a:hover{color:white}
+.submit{
+ width:100%;padding:17px;border:1px solid #ed263f;
+ border-radius:11px;color:white;
+ background:linear-gradient(100deg,#a9132a,#e92743);
+ font-weight:900;font-size:13px;letter-spacing:3px;
+ cursor:pointer;box-shadow:0 8px 25px #ed263f25;
+ transition:.2s;
+}
+.submit:hover{
+ transform:translateY(-2px);
+ box-shadow:0 10px 30px #ed263f50;
+}
+.bottom{
+ text-align:center;color:#aaa;font-size:13px;margin-top:26px;
+}
+.bottom a{color:#ff657a;font-weight:bold}
+.back{
+ display:block;text-align:center;margin-top:20px;
+ color:#777;font-size:11px;letter-spacing:1px;
+}
+.footer{
+ max-width:1000px;margin:45px auto 10px;
+ text-align:center;color:#666;font-size:10px;
+ letter-spacing:3px;position:relative;z-index:1;
+}
+.footer-line{
+ height:1px;background:linear-gradient(90deg,transparent,#8c2635,transparent);
+ margin-bottom:20px;
+}
+@media(max-width:800px){
+ body{padding:17px}
+ .nav{margin-bottom:24px}
+ .layout{grid-template-columns:1fr;max-width:460px;gap:10px}
+ .hero{padding:10px 5px 22px}
+ .emblem{width:65px;height:65px;font-size:37px;margin-bottom:15px}
+ .eyebrow{font-size:9px;letter-spacing:4px;margin-bottom:12px}
+ .hero h1{font-size:40px}
+ .hero p{font-size:13px;margin:12px auto}
+ .line{margin:15px auto}
+ .card{padding:27px 22px}
+ .footer{margin-top:30px}
+}
+@media(max-width:380px){
+ .card{padding:23px 17px}
+ .hero h1{font-size:34px}
+ .nav-link{padding:9px 12px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="nav">
+ <a href="/" class="logo">
+  <span class="logo-icon">D</span>
+  <span>APOLLON<small>ACADEMY</small></span>
+ </a>
+ <a href="/register" class="nav-link">＋ Kayıt Ol ↗</a>
+</header>
+
+<main class="layout">
+
+<section class="hero">
+ <div class="emblem">D</div>
+ <div class="eyebrow">BEYOND THE SYSTEM</div>
+ <h1>APOLLON <span>ACADEMY</span></h1>
+ <p>Bilginin gücüyle geleceğini kodla.</p>
+ <div class="line"></div>
+ <div class="status">
+  <span class="dot"></span>
+  SYSTEM ONLINE · 2026
+ </div>
+</section>
+
+<section>
+<div class="card">
+
+ <div class="card-top">
+  <span>APOLLON AUTHENTICATION</span>
+  <span class="access">SECURE ACCESS</span>
+ </div>
+
+ <div class="heading">
+  <div class="heading-mark">↗</div>
+  <h2>GİRİŞ YAP</h2>
+ </div>
+ <p class="sub">Tekrar hoş geldin. Devam etmek için giriş yap.</p>
+
+ {% with messages = get_flashed_messages() %}
+ {% for message in messages %}
+ <p class="message">{{ message }}</p>
+ {% endfor %}
+ {% endwith %}
+
+ <form method="POST">
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+  <div class="field">
+   <label>KULLANICI ADI</label>
+   <input type="text" name="username"
+    placeholder="Kullanıcı adın"
+    autocomplete="username" required>
+  </div>
+
+  <div class="field">
+   <label>ŞİFRE</label>
+   <div class="password-wrap">
+    <input id="password" type="password" name="password"
+     placeholder="Şifren"
+     autocomplete="current-password" required>
+    <button class="show" type="button" onclick="togglePassword()">GÖSTER</button>
+   </div>
+  </div>
+
+  <div class="forgot">
+   <a href="/forgot-password">Şifremi Unuttum?</a>
+  </div>
+
+  <button class="submit" type="submit">SİSTEME GİR →</button>
+
+ </form>
+
+ <p class="bottom">
+  Hesabın yok mu? <a href="/register">Kayıt Ol →</a>
+ </p>
+
+ <a class="back" href="/">← ANA SAYFAYA DÖN</a>
+
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+ <div class="footer-line"></div>
+ APOLLON ACADEMY © 2026 &nbsp; | &nbsp; BEYOND THE SYSTEM
+</footer>
+
+<script>
+function togglePassword(){
+ const field=document.getElementById("password");
+ const button=document.querySelector(".show");
+ if(field.type==="password"){
+  field.type="text";
+  button.textContent="GİZLE";
+ }else{
+  field.type="password";
+  button.textContent="GÖSTER";
+ }
+}
+</script>
+
+</body>
+</html>

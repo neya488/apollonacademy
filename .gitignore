@@ -1,0 +1,47 @@
+# Veritabanları
+*.db
+*.sqlite
+*.sqlite3
+
+# Gizli bilgiler
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Yedekler
+*.yedek
+*.yedek-*
+*.apollon-oncesi
+*.save
+*.tar.gz
+*-yedek*
+*-oncesi*
+app_*yedek.py
+app_hata_yedek.py
+app_egitim_yedek.py
+app_son_hali_yedek.py
+app_onceki.py
+duzelt.py
+
+# Eski verileri taşıma aracı
+migrate_db.py
+
+# Kullanıcı yüklemeleri ve yerel dosyalar
+instance/
+static/uploads/
+yedek/
+
+# Yayına alınmayacak yardımcı ve yedek dosyalar
+admin_duyuru.py
+mesaj_kur.py
+yedek-register.html
+
+# Eski HTML şablonları
+templates/*_yedek.html
+templates/*_onceki.html
+templates/*yedek*.html
+templates/*onceki*.html
