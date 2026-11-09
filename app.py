@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, session, flash, url_for
 from flask_wtf.csrf import CSRFProtect
+from werkzeug.middleware.proxy_fix import ProxyFix
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
 import sqlite3
@@ -26,6 +27,14 @@ from python_final_data import PYTHON_FINAL
 from javascript_final_data import JAVASCRIPT_FINAL
 
 app = Flask(__name__)
+app.wsgi_app = ProxyFix(
+    app.wsgi_app,
+    x_for=1,
+    x_proto=1,
+    x_host=1,
+    x_port=1,
+    x_prefix=0,
+)
 app.secret_key = os.environ.get("SECRET_KEY", "local-development-key")
 app.config["MAX_CONTENT_LENGTH"] = 3 * 1024 * 1024
 app.config["WTF_CSRF_ENABLED"] = True
